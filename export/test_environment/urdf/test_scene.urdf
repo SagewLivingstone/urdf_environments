@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<!-- created with Phobos 1.0.1 "Capricious Choutengan" -->
+  <robot name="test_scene">
+
+    <link name="arm_1_link">
+      <inertial>
+        <origin xyz="0 0.19559 4e-05" rpy="0 0 0"/>
+        <mass value="0.12"/>
+        <inertia ixx="0.00163" ixy="0" ixz="0" iyy="5e-05" iyz="0" izz="0.00163"/>
+      </inertial>
+      <visual name="Arm section 1">
+        <origin xyz="0 0.21482 0.00076" rpy="1.5708 0 0"/>
+        <geometry>
+          <cylinder radius="0.03" length="0.4"/>
+        </geometry>
+        <material name="Material.003"/>
+      </visual>
+      <collision name="Arm section 1">
+        <origin xyz="0 0.21507 0.00053" rpy="1.5708 0 0"/>
+        <geometry>
+          <cylinder radius="0.03" length="0.4"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="arm_base_link.000">
+      <inertial>
+        <origin xyz="0 0 0.4195" rpy="0 0 0"/>
+        <mass value="0.45"/>
+        <inertia ixx="0.05497" ixy="0" ixz="0" iyy="0.05497" iyz="0" izz="0.01668"/>
+      </inertial>
+      <visual name="Arm base">
+        <origin xyz="0 0 0.4195" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="..\meshes\dae\Sphere.dae" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="Material.004"/>
+      </visual>
+      <collision name="Arm base.000">
+        <origin xyz="0 0 0.4195" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="..\meshes\dae\Sphere.001.dae" scale="1.0 1.0 1.0"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="root">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="100000.0"/>
+        <inertia ixx="3333333.25" ixy="0" ixz="0" iyy="3333333.25" iyz="0" izz="6666666.5"/>
+      </inertial>
+      <visual name="Ground">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="20.0 20.0 0.0002"/>
+        </geometry>
+      </visual>
+      <collision name="Ground">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="20.0 20.0 0.0002"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="soda_can_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.04"/>
+        <inertia ixx="0.00023" ixy="0" ixz="0" iyy="0.00023" iyz="0" izz="7e-05"/>
+      </inertial>
+      <visual name="Soda Can">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="..\meshes\dae\Cylinder.dae" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="soda_can_mat"/>
+      </visual>
+      <collision name="Soda Can">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.06" length="0.24"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="table_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="68.0"/>
+        <inertia ixx="50.28507" ixy="0" ixz="0" iyy="50.28507" iyz="0" izz="44.98273"/>
+      </inertial>
+      <visual name="1m Table">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="..\meshes\dae\1m Table.dae" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="1m Table.000">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="..\meshes\dae\Cube.002.dae" scale="1.0 1.0 1.0"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="arm_1_link" type="revolute">
+      <origin xyz="0 0 0.45848" rpy="1.5708 0 0"/>
+      <parent link="arm_base_link.000"/>
+      <child link="arm_1_link"/>
+      <axis xyz="0 0 1.0"/>
+      <limit lower="-0.4" upper="0.4" effort="0" velocity="0"/>
+    </joint>
+
+    <joint name="arm_base_link.000.000" type="floating">
+      <origin xyz="0.0656 0.55642 1.6248" rpy="0 0 0"/>
+      <parent link="root"/>
+      <child link="arm_base_link.000"/>
+      <limit effort="0" velocity="0"/>
+    </joint>
+
+    <joint name="soda_can_link" type="floating">
+      <origin xyz="-0.03638 -0.72384 1.73349" rpy="0 0 0"/>
+      <parent link="root"/>
+      <child link="soda_can_link"/>
+      <limit effort="0" velocity="0"/>
+    </joint>
+
+    <joint name="table_link" type="floating">
+      <origin xyz="0 0 1.5" rpy="0 0 0"/>
+      <parent link="root"/>
+      <child link="table_link"/>
+      <limit effort="0" velocity="0"/>
+    </joint>
+
+    <material name="Material.001">
+      <color rgba="0.64 0.64 0.64 1.0"/>
+    </material>
+
+    <material name="Material.003">
+      <color rgba="0.64 0.64 0.64 1.0"/>
+    </material>
+
+    <material name="Material.004">
+      <color rgba="0.64 0.64 0.64 1.0"/>
+    </material>
+
+    <material name="soda_can_mat">
+      <color rgba="0.60206 0.64 0.64 1.0"/>
+    </material>
+
+  </robot>

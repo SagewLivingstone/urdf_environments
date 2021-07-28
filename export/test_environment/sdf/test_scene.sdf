@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<!-- created with Phobos 1.0.1 "Capricious Choutengan" -->
+<sdf version="1.5">
+  <model name="test_scene">
+    <link name="root">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <mass>100000.0</mass>
+        <inertia>
+          <ixx>3333333.25</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>3333333.25</iyy>
+          <iyz>0</iyz>
+          <izz>6666666.5</izz>
+        </inertia>
+        <pose>0 0 0 0 0 0</pose>
+      </inertial>
+      <collision name="Ground">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>20.0 20.0 0.0002</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="Ground">
+        <pose>0.0 0.0 0.0 0.0 -0.0 0.0</pose>
+        <geometry>
+          <box>
+            <size>20.0 20.0 0.0002</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <link name="arm_1_link">
+      <pose>0.0656 0.55642 2.08328 1.5708 0 0</pose>
+      <inertial>
+        <mass>0.12</mass>
+        <inertia>
+          <ixx>0.00163</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>5e-05</iyy>
+          <iyz>0</iyz>
+          <izz>0.00163</izz>
+        </inertia>
+        <pose>0 0.19559 4e-05 0 0 0</pose>
+      </inertial>
+      <collision name="Arm section 1">
+        <pose>0 0.21507 0.00053 1.5708 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.03</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="Arm section 1">
+        <pose>0.0 0.21481657028198242 0.0007593631744384766 1.5707963705062866 -1.6297065693476886e-12 0.0</pose>
+        <material>
+          <ambient>0.64 0.64 0.64 1.0</ambient>
+          <diffuse>0.64 0.64 0.64 1.0</diffuse>
+          <specular>0.5 0.5 0.5 1.0</specular>
+        </material>
+        <geometry>
+          <cylinder>
+            <radius>0.03</radius>
+            <length>0.4</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <link name="arm_base_link.000">
+      <pose>0.0656 0.55642 1.6248 0 0 0</pose>
+      <inertial>
+        <mass>0.45</mass>
+        <inertia>
+          <ixx>0.05497</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.05497</iyy>
+          <iyz>0</iyz>
+          <izz>0.01668</izz>
+        </inertia>
+        <pose>0 0 0.4195 0 0 0</pose>
+      </inertial>
+      <collision name="Arm base.000">
+        <pose>0 0 0.4195 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://test_scene/meshes/Sphere.001.dae</uri>
+            <scale>1.0 1.0 1.0</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="Arm base">
+        <pose>0.0 1.1920928955078125e-07 0.41950464248657227 0.0 -0.0 0.0</pose>
+        <material>
+          <ambient>0.64 0.64 0.64 1.0</ambient>
+          <diffuse>0.64 0.64 0.64 1.0</diffuse>
+          <specular>0.5 0.5 0.5 1.0</specular>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>model://test_scene/meshes/Sphere.dae</uri>
+            <scale>1.0 1.0 1.0</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <link name="table_link">
+      <pose>0 0 1.5 0 0 0</pose>
+      <inertial>
+        <mass>68.0</mass>
+        <inertia>
+          <ixx>50.28507</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>50.28507</iyy>
+          <iyz>0</iyz>
+          <izz>44.98273</izz>
+        </inertia>
+        <pose>0 0 0 0 0 0</pose>
+      </inertial>
+      <collision name="1m Table.000">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://test_scene/meshes/Cube.002.dae</uri>
+            <scale>1.0 1.0 1.0</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="1m Table">
+        <pose>0.0 0.0 0.0 0.0 -0.0 0.0</pose>
+        <material>
+          <ambient>0.64 0.64 0.64 1.0</ambient>
+          <diffuse>0.64 0.64 0.64 1.0</diffuse>
+          <specular>0.5 0.5 0.5 1.0</specular>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>model://test_scene/meshes/1m Table.dae</uri>
+            <scale>1.0 1.0 1.0</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <link name="soda_can_link">
+      <pose>-0.03638 -0.72384 1.73349 0 0 0</pose>
+      <inertial>
+        <mass>0.04</mass>
+        <inertia>
+          <ixx>0.00023</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00023</iyy>
+          <iyz>0</iyz>
+          <izz>7e-05</izz>
+        </inertia>
+        <pose>0 0 0 0 0 0</pose>
+      </inertial>
+      <collision name="Soda Can">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.06</radius>
+            <length>0.24</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="Soda Can">
+        <pose>0.0 0.0 0.0 0.0 -0.0 0.0</pose>
+        <material>
+          <ambient>0.64 0.64 0.64 1.0</ambient>
+          <diffuse>0.64 0.64 0.64 1.0</diffuse>
+          <specular>0.5 0.5 0.5 1.0</specular>
+        </material>
+        <geometry>
+          <mesh>
+            <uri>model://test_scene/meshes/Cylinder.dae</uri>
+            <scale>1.0 1.0 1.0</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint type="revolute" name="arm_1_link">
+      <parent>arm_base_link.000</parent>
+      <child>arm_1_link</child>
+      <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+      <axis>
+        <xyz>0 0 1.0</xyz>
+        <limit>
+          <lower>-0.4</lower>
+          <upper>0.4</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+      </axis>
+    </joint>
+    <joint type="TODO" name="table_link">
+      <parent>root</parent>
+      <child>table_link</child>
+      <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+    </joint>
+    <joint type="TODO" name="arm_base_link.000.000">
+      <parent>root</parent>
+      <child>arm_base_link.000</child>
+      <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+    </joint>
+    <joint type="TODO" name="soda_can_link">
+      <parent>root</parent>
+      <child>soda_can_link</child>
+      <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+    </joint>
+  </model>
+</sdf>
