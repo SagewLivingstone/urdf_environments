@@ -5,6 +5,9 @@ This repo contains the source and exports of various 3D environments designed fo
 _An example scene of a kitchen modeled in Blender_
 ![Alt text](example.png)
 
+_Underlying structure of the scene_
+![Alt text](example_2.png)
+
 ### Repo Structure
 ```
 + Catalog - contains source objects and files for the scenes
