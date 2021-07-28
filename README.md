@@ -2,7 +2,8 @@
 
 This repo contains the source and exports of various 3D environments designed for robot simulation and visualization. Scenes are designed and constructed in Blender and represented as robot models using the Phobos plugin.
 
-
+_An example scene of a kitchen modeled in Blender_
+![Alt text](example.png)
 
 ### Repo Structure
 ```
