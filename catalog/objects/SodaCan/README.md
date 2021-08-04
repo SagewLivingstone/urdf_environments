@@ -1,6 +1,6 @@
-# OBJECT_NAME
+# Soda Can
 
-### Short description of object
+### Generic soda can from Sketchfab
 
 ![Object image preview](thumbnail.png)
 
