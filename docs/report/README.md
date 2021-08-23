@@ -20,7 +20,7 @@ This goal raises several basic requirements for a scene that could be used fluid
 * Scenes may contain different layouts of objects within them, for example a kitchen refridgerator may be empty, 50% full, or completely packed.
 * The scenes exist in a format friendly to all destination programs/simulators. (This was a large contingency point, which will be further discussed.)
 
-#### The source of scenes
+### The source of scenes
 
 A direct question that immediatly arises from this proposal is the option to use existing scenes from databases around the internet. Much time was spent exporing possible datasets with the purpose of configuring them for our purposes, however after testing many of these they all failed more than one of the following ways:
 
