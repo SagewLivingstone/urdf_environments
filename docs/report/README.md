@@ -9,11 +9,11 @@ _The words 'scene' and 'environment' will be used interchangebly in this documen
 
 ### Project Summary
 
-The result of this project is a toolchain that allows for straighforward and intuitive creation of robotics environments for use in simulators and visualizing programs. The toolchair uses common open-source software with extensions to allow for a new workflow from modeling and texturing to physical properties (such as mass and inertial values). While this kind of workflow is relatively new, it is well-embedded withing already existing software to ensure that the process does not become outdated. The end result is the ability to create scenes such as the following example:
+The result of this project is a toolchain that allows for straighforward and intuitive creation of robotics environments for use in simulators and visualizing programs. The toolchain uses common open-source software with extensions to allow for a new workflow from modeling and texturing to physical properties (such as mass and inertial values). While this kind of workflow is relatively new, it is well-embedded within already existing software to ensure that the process does not become outdated. The end result is the ability to create scenes such as the following example:
 
 ![Image]()
 
-More details on the process can be found in the documentation, however a quick outline of the steps in creating a scene are described here:
+More details on the process can be found in the documentation, however a quick outline of the steps in creating a scene is provided here:
 
 1. A layout for a scene (walls, large static objects, etc) is modeled in `Blender` and a static hierarchy is created for these objects.
 2. Dynamic objects are added to the scene (either pre-made or modeled) and added to the hierarchy.
